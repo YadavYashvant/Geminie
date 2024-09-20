@@ -95,7 +95,8 @@ class MainActivity : ComponentActivity() {
                         color = MaterialTheme.colorScheme.background,
                 ) {
                     val generativeModel = GenerativeModel(
-                            modelName = "gemini-pro-vision",
+                        modelName = "gemini-1.5-flash",
+//                            modelName = "gemini-pro-vision",
                             apiKey = BuildConfig.apiKey
                     )
                     val viewModel = GetImgContextViewmodel(generativeModel)
