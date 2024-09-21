@@ -1,10 +1,10 @@
-package com.example.geminie.ui.animations
+package com.example.imgc.ui.animations
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.airbnb.lottie.compose.LottieAnimation
-import com.example.geminie.R
+import com.example.imgc.R
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.animateLottieCompositionAsState

@@ -1,4 +1,4 @@
-package com.example.geminie.ui.theme
+package com.example.imgc.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -44,7 +44,7 @@ val blueV = Color(0XFF1F2731)
 
 
 @Composable
-fun GeminieTheme(
+fun ImGCTheme(
         darkTheme: Boolean = isSystemInDarkTheme(),
         // Dynamic color is available on Android 12+
         dynamicColor: Boolean = true,

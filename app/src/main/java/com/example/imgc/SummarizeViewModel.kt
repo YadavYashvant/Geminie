@@ -1,4 +1,4 @@
-package com.example.geminie
+package com.example.imgc
 
 import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package com.example.geminie
+package com.example.imgc
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -31,14 +31,11 @@ import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
-import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -54,29 +51,26 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.imageLoader
 import coil.request.ImageRequest
 import coil.request.ImageResult
-import com.example.geminie.ui.animations.AnimatedPreloaderDog
-import com.example.geminie.ui.animations.AnimatedPreloaderLoading
+import com.example.imgc.ui.animations.AnimatedPreloaderDog
+import com.example.imgc.ui.animations.AnimatedPreloaderLoading
 import com.google.ai.client.generativeai.GenerativeModel
-import com.example.geminie.ui.theme.GeminieTheme
-import com.example.geminie.ui.theme.blackV
-import com.example.geminie.ui.theme.blueV
-import com.example.geminie.ui.theme.nunitofont
-import com.example.geminie.ui.theme.redV
+import com.example.imgc.ui.theme.ImGCTheme
+import com.example.imgc.ui.theme.blackV
+import com.example.imgc.ui.theme.blueV
+import com.example.imgc.ui.theme.nunitofont
+import com.example.imgc.ui.theme.redV
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -88,8 +82,7 @@ class MainActivity : ComponentActivity() {
         //WindowCompat.setDecorFitsSystemWindows(window,false)
 
         setContent {
-            GeminieTheme {
-                // A surface container using the 'background' color from the theme
+            ImGCTheme {
                 Surface(
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background,
@@ -114,7 +107,6 @@ internal fun GetImgContextRoute(
     val summarizeUiState by getImgContextViewmodel.uiState.collectAsState()
 
     GetImgContextScreen(summarizeUiState, onSummarizeClicked = { inputImage,prompt, isAdv->
-        //summarizeViewModel.summarize(inputText)
         getImgContextViewmodel.findContextOfImage(inputImage, prompt, isAdv)
     })
 }

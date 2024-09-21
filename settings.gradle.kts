@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Geminie"
+rootProject.name = "ImGC"
 include(":app")

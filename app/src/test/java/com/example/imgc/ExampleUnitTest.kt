@@ -1,4 +1,4 @@
-package com.example.geminie
+package com.example.imgc
 
 import org.junit.Test
 

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.geminie"
+    namespace = "com.example.imgc"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.geminie"
+        applicationId = "com.example.imgc"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
