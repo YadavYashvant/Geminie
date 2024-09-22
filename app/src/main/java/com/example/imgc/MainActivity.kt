@@ -222,8 +222,7 @@ fun GetImgContextScreen(
                     val checkedState = remember { mutableStateOf(false) }
                     var value by remember { mutableStateOf("") }
                     val onValueChange: (String) -> Unit = { value = it }
-                    // in below line we are displaying a row
-                    // and we are creating a checkbox in a row.
+
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -232,11 +231,7 @@ fun GetImgContextScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Checkbox(
-                            // below line we are setting
-                            // the state of checkbox.
                             checked = checkedState.value,
-                            // below line is use to add padding
-                            // to our checkbox.
                             modifier = Modifier.padding(horizontal = 16.dp),
 
                             colors = CheckboxDefaults.colors(
@@ -244,12 +239,9 @@ fun GetImgContextScreen(
                                 uncheckedColor = Color.White,
                                 checkmarkColor = Color.White
                             ),
-                            // below line is use to add on check
-                            // change to our checkbox.
                             onCheckedChange = { checkedState.value = it },
                         )
-                        // below line is use to add text to our check box and we are
-                        // adding padding to our text of checkbox
+
                         Text(
                             text = "Advanced Mode",
                             modifier = Modifier.align(Alignment.CenterVertically),
@@ -307,8 +299,6 @@ fun GetImgContextScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
 
-                            //Icon(imageVector = (Icons.Default.Add), contentDescription = null)
-
                             Text(
                                 text = "Get Context",
                                 style = androidx.compose.ui.text.TextStyle(
@@ -324,7 +314,6 @@ fun GetImgContextScreen(
 
             when (uiState) {
                 SummarizeUiState.Initial -> {
-                    // Nothing is shown
                     AnimatedPreloaderDog(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -352,7 +341,6 @@ fun GetImgContextScreen(
                             .wrapContentHeight()
                             .clip(RoundedCornerShape(16.dp))
                             .padding(horizontal = 20.dp),
-                        //backgroundColor = redV
 
                     ) {
                         Row(modifier = Modifier.padding(all = 8.dp)
