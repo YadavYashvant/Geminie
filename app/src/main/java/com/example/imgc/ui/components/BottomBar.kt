@@ -13,6 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
+import com.example.imgc.R
 
 
 data class BottomNavigationItem(
@@ -28,19 +29,14 @@ fun BottomNavigation(
 ){
     val items = listOf(
         BottomNavigationItem(
-            title = "Home",
+            title = "Chat",
             selectedIcon = painterResource(id = R.drawable.baseline_home_24),
             unselectedIcon = painterResource(id = R.drawable.outline_home_24)
         ),
         BottomNavigationItem(
-            title = "Plot",
+            title = "History",
             selectedIcon = painterResource(id = R.drawable.baseline_auto_graph_24),
             unselectedIcon = painterResource(id = R.drawable.outline_auto_graph_24)
-        ),
-        BottomNavigationItem(
-            title = "LeaderBoard",
-            selectedIcon = painterResource(id = R.drawable.baseline_leaderboard_24),
-            unselectedIcon = painterResource(id = R.drawable.outline_leaderboard_24)
         )
     )
     var selectedItemIndex by rememberSaveable {
