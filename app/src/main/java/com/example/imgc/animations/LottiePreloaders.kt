@@ -1,4 +1,4 @@
-package com.example.imgc.ui.animations
+package com.example.imgc.animations
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

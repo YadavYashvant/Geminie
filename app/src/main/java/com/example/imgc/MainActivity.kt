@@ -64,8 +64,8 @@ import coil.compose.AsyncImage
 import coil.imageLoader
 import coil.request.ImageRequest
 import coil.request.ImageResult
-import com.example.imgc.ui.animations.AnimatedPreloaderDog
-import com.example.imgc.ui.animations.AnimatedPreloaderLoading
+import com.example.imgc.animations.AnimatedPreloaderDog
+import com.example.imgc.animations.AnimatedPreloaderLoading
 import com.google.ai.client.generativeai.GenerativeModel
 import com.example.imgc.ui.theme.ImGCTheme
 import com.example.imgc.ui.theme.blackV
